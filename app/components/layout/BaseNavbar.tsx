@@ -1,12 +1,5 @@
 import { useMemo } from "react";
 
-// Next
-import Link from "next/link";
-import Image from "next/image";
-
-// Assets
-import Logo from "@/public/assets/img/invoify-logo.svg";
-
 // ShadCn
 import { Card } from "@/components/ui/card";
 
@@ -21,19 +14,8 @@ const BaseNavbar = () => {
     return (
         <header className="lg:container z-[99]">
             <nav>
-                <Card className="flex flex-wrap justify-between items-center px-5 gap-5">
-                    <Link href={"/"}>
-                        <Image
-                            src={Logo}
-                            alt="Invoify Logo"
-                            width={190}
-                            height={100}
-                            loading="eager"
-                        />
-                    </Link>
-                    {/* ? DEV Only */}
-                    {devEnv && <DevDebug />}
-                    <LanguageSelector />
+                <Card className="flex flex-row items-center justify-between w-full gap-5 px-5">
+            <DevDebug />
                     <ThemeSwitcher />
                 </Card>
             </nav>

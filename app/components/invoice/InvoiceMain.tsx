@@ -30,7 +30,7 @@ const InvoiceMain = () => {
                     })}
                 >
                     <div className="flex flex-wrap">
-                        <InvoiceForm />
+                        {/* <InvoiceForm /> */}
                         <InvoiceActions />
                     </div>
                 </form>

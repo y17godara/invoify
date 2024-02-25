@@ -17,10 +17,9 @@ type DevDebugProps = {};
 const DevDebug = ({}: DevDebugProps) => {
     const { reset, formState } = useFormContext();
     return (
-        <div className="flex border-2 border-red-500 rounded-md">
-            <div className="flex flex-col">
-                <b>DEV:</b>
-                Form: {formState.isDirty ? "Dirty" : "Clean"}
+        <div className="flex flex-row items-center justify-around w-full rounded-md">
+            <div className="flex flex-col ">
+               
                 <BaseButton
                     tooltipLabel="Form Test Fill"
                     variant="outline"
@@ -28,6 +27,7 @@ const DevDebug = ({}: DevDebugProps) => {
                 >
                     Fill in the form
                 </BaseButton>
+
             </div>
 
             <div className="flex flex-col">
