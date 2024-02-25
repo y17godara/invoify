@@ -28,7 +28,7 @@ const InvoiceActions = () => {
 
     return (
         <div className={`xl:w-[45%]`}>
-            <Card className="h-auto sticky top-0 px-2">
+            <Card className="sticky top-0 h-auto px-2">
                 <CardHeader>
                     <CardTitle>ACTIONS</CardTitle>
                     <CardDescription>Operations and preview</CardDescription>
@@ -36,43 +36,6 @@ const InvoiceActions = () => {
 
                 <div className="flex flex-col flex-wrap items-center gap-2">
                     <div className="flex flex-wrap gap-3">
-                        {/* Load modal button */}
-                        <InvoiceLoaderModal>
-                            <BaseButton
-                                variant="outline"
-                                tooltipLabel="Open load invoice menu"
-                                disabled={invoicePdfLoading}
-                            >
-                                <FolderUp />
-                                Load Invoice
-                            </BaseButton>
-                        </InvoiceLoaderModal>
-
-                        {/* Export modal button */}
-                        <InvoiceExportModal>
-                            <BaseButton
-                                variant="outline"
-                                tooltipLabel="Open load invoice menu"
-                                disabled={invoicePdfLoading}
-                            >
-                                <Import />
-                                Export Invoice
-                            </BaseButton>
-                        </InvoiceExportModal>
-                    </div>
-
-                    <div className="flex flex-wrap gap-3">
-                        {/* New invoice button */}
-                        <NewInvoiceAlert>
-                            <BaseButton
-                                variant="outline"
-                                tooltipLabel="Get a new invoice form"
-                                disabled={invoicePdfLoading}
-                            >
-                                <Plus />
-                                New Invoice
-                            </BaseButton>
-                        </NewInvoiceAlert>
 
                         {/* Generate pdf button */}
                         <BaseButton
